@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">KeyStore</string>
+    <string name="login">Login</string>
+    <string name="New_account">New Account</string>
+    <string name="keystore_logo_description">Logo KeyStore</string>
+    <string name="user_icon_description">User icon</string>
+    <string name="Guest">Guest</string>
+    <string name="Create_Account">Create Account</string>
+    <string name="Email">Email</string>
+    <string name="Password">Password</string>
+    <string name="Confirm_password">Confirm Password</string>
+    <string name="First_Name">First Name</string>
+    <string name="Last_Name">Last Name</string>
+    <string name="Phone_Number">Phone Number</string>
+    <string name="Birth_Date">Birth Date</string>
+    <string name="Cancel">Cancel</string>
+</resources>
