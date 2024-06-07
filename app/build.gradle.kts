@@ -1,7 +1,13 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("kotlin-parcelize")
+    id("com.google.dagger.hilt.android") version "2.44"
+    id("kotlin-kapt")
 }
+
+
+
 
 android {
     namespace = "pt.ipca.keystore"
@@ -45,4 +51,29 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
+
+    //loading button
+    implementation (libs.loading.button.android)
+
+    //Glide
+    implementation (libs.glide)
+
+    //circular image
+    implementation (libs.circleimageview)
+
+    //viewpager2 indicator
+    implementation (libs.viewpagerindicator)
+
+    //stepView
+    implementation (libs.stepview)
+
+    //Android Ktx
+    implementation (libs.androidx.navigation.fragment.ktx)
+
+    //Dagger hilt
+    implementation (libs.hilt.android)
+    kapt (libs.hilt.compiler)
+
+
 }

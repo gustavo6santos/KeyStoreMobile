@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">KeyStore</string>
     <string name="login">Login</string>
-    <string name="New_account">New Account</string>
+    <string name="Register">Register</string>
     <string name="keystore_logo_description">Logo KeyStore</string>
     <string name="user_icon_description">User icon</string>
     <string name="Guest">Guest</string>
@@ -14,4 +14,6 @@
     <string name="Phone_Number">Phone Number</string>
     <string name="Birth_Date">Birth Date</string>
     <string name="Cancel">Cancel</string>
+    <string name="FYP">Forgot your password?</string>
+    <string name="create_account">Create Account</string>
 </resources>
