@@ -3,25 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/login_register_graph"
-    app:startDestination="@id/loginFragment">
+    app:startDestination="@id/registerFragment">
 
-    <fragment
-        android:id="@+id/introductionFragment2"
-        android:name="pt.ipca.keystore.fragments.loginRegister.IntroductionFragment"
-        android:label="IntroductionFragment"
-        tools:layout="@layout/activity_login_register">
-        <action
-            android:id="@+id/action_introductionFragment2_to_loginFragment2"
-            app:destination="@id/loginFragment" />
-        <action
-            android:id="@+id/action_introductionFragment2_to_registerFragment"
-            app:destination="@id/registerFragment" />
-    </fragment>
     <fragment
         android:id="@+id/loginFragment"
         android:name="pt.ipca.keystore.fragments.loginRegister.LoginFragment"
         android:label="LoginFragment"
-        tools:layout="@layout/activity_login">
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
@@ -29,10 +17,21 @@
     <fragment
         android:id="@+id/registerFragment"
         android:name="pt.ipca.keystore.fragments.loginRegister.RegisterFragment"
-        android:label="RegisterFragment"
-        tools:layout="@layout/activity_regist">
+        tools:layout="@layout/fragment_register">
         <action
             android:id="@+id/action_registerFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/introductionFragment"
+        android:name="pt.ipca.keystore.fragments.loginRegister.IntroductionFragment"
+        android:label="IntroductionFragment"
+        tools:layout="@layout/fragment_account_options">
+        <action
+            android:id="@+id/action_introductionFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_introductionFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
     </fragment>
 

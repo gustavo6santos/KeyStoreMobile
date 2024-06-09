@@ -12,7 +12,7 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="75dp"
         android:text="@string/Create_Account"
-        android:textColor="@color/blueish_color"
+        android:textColor="@color/button_register_color"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -39,12 +39,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+
     <EditText
         android:id="@+id/Username"
         android:layout_width="329dp"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="341dp"
+        android:layout_marginTop="198dp"
         android:autofillHints="name"
         android:background="@drawable/login_register_field"
         android:ems="10"
@@ -59,20 +60,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
-
     <EditText
         android:id="@+id/Password"
         android:layout_width="329dp"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="199dp"
+        android:layout_marginTop="268dp"
         android:autofillHints="password"
         android:background="@drawable/login_register_field"
         android:ems="10"
         android:hint="@string/Password"
         android:inputType="textPassword"
-        android:paddingStart="20dp"
+        android:paddingStart="30dp"
         android:paddingEnd="20dp"
         android:textColor="@color/black"
         android:textSize="13sp"
@@ -80,27 +79,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/ConfirmPassword"
-        android:layout_width="329dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="270dp"
-        android:autofillHints="password"
-        android:background="@drawable/login_register_field"
-        android:ems="10"
-        android:hint="@string/Confirm_password"
-        android:inputType="textPassword"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:textColor="@color/black"
-        android:textSize="13sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
 
     <TextView
         android:id="@+id/cancel_button"

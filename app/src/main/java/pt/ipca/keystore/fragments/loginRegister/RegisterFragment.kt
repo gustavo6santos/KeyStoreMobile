@@ -9,9 +9,12 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.withContext
 import pt.ipca.keystore.R
 import pt.ipca.keystore.data.User
 import pt.ipca.keystore.databinding.FragmentRegisterBinding
+import pt.ipca.keystore.util.RegisterValidation
 import pt.ipca.keystore.viewmodel.RegisterViewModel
 import pt.ipca.keystore.util.Resource
 
@@ -39,6 +42,7 @@ class RegisterFragment : Fragment() {
                 val user = User(
                     Username.text.toString().trim(),
                     EmailAddress.text.toString().trim()
+
                 )
                 val password = Password.text.toString()
 
@@ -59,6 +63,28 @@ class RegisterFragment : Fragment() {
                     is Resource.Error -> {
                         Log.e(TAG, resource.message.toString())
                         binding.buttonCreateAccount.revertAnimation()
+                    }
+                    else -> Unit
+                }
+            }
+        }
+        lifecycleScope.launchWhenStarted {
+            viewModel.validation.collect{
+                validation ->
+                if(validation.EmailAdress is  RegisterValidation.Failed) {
+                    withContext(Dispatchers.Main){
+                        binding.EmailAddress.apply {
+                            requestFocus()
+                            error = validation.EmailAdress.message
+                        }
+                    }
+                }
+                if (validation.Password is RegisterValidation.Failed){
+                    withContext(Dispatchers.Main){
+                        binding.Password.apply {
+                            requestFocus()
+                            error = validation.Password.message
+                        }
                     }
                 }
             }

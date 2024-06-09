@@ -15,9 +15,6 @@
         android:theme="@style/Theme.KeyStore"
         tools:targetApi="31">
         <activity
-            android:name=".activities.ShoppingActivity"
-            android:exported="false" />
-        <activity
             android:name=".activities.LoginRegisterActivity"
             android:exported="true">
             <intent-filter>
