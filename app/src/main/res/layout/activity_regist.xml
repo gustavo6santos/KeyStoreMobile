@@ -40,7 +40,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/FirstName"
+        android:id="@+id/Username"
         android:layout_width="329dp"
         android:layout_height="48dp"
         android:layout_gravity="center_horizontal"
@@ -48,7 +48,7 @@
         android:autofillHints="name"
         android:background="@drawable/login_register_field"
         android:ems="10"
-        android:hint="@string/First_Name"
+        android:hint="@string/Username"
         android:inputType="text"
         android:paddingStart="20dp"
         android:paddingEnd="20dp"
@@ -59,25 +59,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-        android:id="@+id/LastName"
-        android:layout_width="329dp"
-        android:layout_height="48dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="412dp"
-        android:autofillHints="name"
-        android:background="@drawable/login_register_field"
-        android:ems="10"
-        android:hint="@string/Last_Name"
-        android:inputType="text"
-        android:paddingStart="20dp"
-        android:paddingEnd="20dp"
-        android:textColor="@color/black"
-        android:textSize="13sp"
-        android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+
 
     <EditText
         android:id="@+id/Password"
@@ -134,7 +116,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
+    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
         android:id="@+id/button_create_account"
         android:layout_width="317dp"
         android:layout_height="62dp"

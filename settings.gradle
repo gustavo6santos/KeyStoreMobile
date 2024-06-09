@@ -1,14 +1,8 @@
 pluginManagement {
     repositories {
-        google {
-            content {
-                includeGroupByRegex("com\\.android.*")
-                includeGroupByRegex("com\\.google.*")
-                includeGroupByRegex("androidx.*")
-            }
-        }
-        mavenCentral()
         gradlePluginPortal()
+        google()
+        mavenCentral()
     }
 }
 dependencyResolutionManagement {
@@ -17,9 +11,8 @@ dependencyResolutionManagement {
         google()
         mavenCentral()
         //noinspection JcenterRepositoryObsolete
-        jcenter();
+        jcenter()
     }
 }
-
 rootProject.name = "KeyStore"
-include(":app")
+include ':app'
