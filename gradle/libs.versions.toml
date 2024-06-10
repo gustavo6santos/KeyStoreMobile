@@ -19,6 +19,7 @@ navigationFragmentKtx = "2.7.7"
 stepview = "1.5.1"
 viewpagerindicator = "1.0.0-alpha.1"
 firebaseAuth = "23.0.0"
+firebaseFirestore = "25.0.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -41,6 +42,7 @@ androidx-constraintlayout = { group = "androidx.constraintlayout", name = "const
 stepview = { module = "com.shuhart.stepview:stepview", version.ref = "stepview" }
 viewpagerindicator = { module = "io.github.vejei.viewpagerindicator:viewpagerindicator", version.ref = "viewpagerindicator" }
 firebase-auth = { group = "com.google.firebase", name = "firebase-auth", version.ref = "firebaseAuth" }
+firebase-firestore = { group = "com.google.firebase", name = "firebase-firestore", version.ref = "firebaseFirestore" }
 
 [plugins]
 androidApplication = { id = "com.android.application", version.ref = "agp" }

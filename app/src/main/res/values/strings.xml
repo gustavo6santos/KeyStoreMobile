@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">KeyStore</string>
     <string name="login">Login</string>
+    <string name="TextLogin">Login</string>
     <string name="Register">Register</string>
     <string name="keystore_logo_description">Logo KeyStore</string>
     <string name="user_icon_description">User icon</string>
