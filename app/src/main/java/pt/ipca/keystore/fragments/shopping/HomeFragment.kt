@@ -40,6 +40,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             XboxFragment()
         )
 
+        binding.viewpagerHome.isUserInputEnabled = false
+
         val viewpagerAdapter =
             HomeViewpagerAdapter(categoriesFragments,childFragmentManager,lifecycle)
         binding.viewpagerHome.adapter = viewpagerAdapter
