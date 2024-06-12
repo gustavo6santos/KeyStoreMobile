@@ -9,8 +9,7 @@ import pt.ipca.keystore.viewmodel.CategoryModel
 class BaseCategoryViewModelFactoryFactory(
     private val firestore: FirebaseFirestore,
     private val category: Category
-
-):ViewModelProvider.Factory {
+): ViewModelProvider.Factory {
 
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
         return CategoryModel(firestore,category) as T

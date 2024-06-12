@@ -40,17 +40,17 @@ class MainCategoryViewModel @Inject constructor(
 
         firestore.
         collection("Products").get().addOnSuccessListener { result ->
-                val specialProductList = result.toObjects(Product::class.java)
+            val specialProductList = result.toObjects(Product::class.java)
 
-                viewModelScope.launch {
-                    _specialProducts.emit(Resource.Success(specialProductList))
-                }
-
-            }.addOnFailureListener{
-                viewModelScope.launch {
-                    _specialProducts.emit(Resource.Error(it.message.toString()))
-                }
+            viewModelScope.launch {
+                _specialProducts.emit(Resource.Success(specialProductList))
             }
+
+        }.addOnFailureListener{
+            viewModelScope.launch {
+                _specialProducts.emit(Resource.Error(it.message.toString()))
+            }
+        }
     }
 
     fun fetchBestDeals(){
@@ -97,7 +97,7 @@ class MainCategoryViewModel @Inject constructor(
 }
 
 internal data class PagingInfo(
-     var bestProuctsPage: Long = 1,
-     var oldBestProducts: List<Product> = emptyList(),
-     var isPaginEnd: Boolean = false
+    var bestProuctsPage: Long = 1,
+    var oldBestProducts: List<Product> = emptyList(),
+    var isPaginEnd: Boolean = false
 )

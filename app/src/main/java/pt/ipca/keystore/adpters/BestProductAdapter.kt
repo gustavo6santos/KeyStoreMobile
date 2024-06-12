@@ -7,11 +7,11 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import pt.ipca.keystore.data.Product
-import pt.ipca.keystore.databinding.BestDealsRvItemBinding
 import pt.ipca.keystore.databinding.ProductRvItemBinding
 
-class BestProductAdapter: RecyclerView.Adapter<BestProductAdapter.BestProductViewHolder>() {
-    inner class BestProductViewHolder(private val binding: ProductRvItemBinding) : RecyclerView.ViewHolder(binding.root) {
+class BestProductAdapter : RecyclerView.Adapter<BestProductAdapter.BestProductsViewHolder>() {
+    inner class BestProductsViewHolder(private val binding: ProductRvItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(product: Product) {
             binding.apply {
                 Glide.with(itemView).load(product.images[0]).into(imgProduct)
@@ -19,13 +19,14 @@ class BestProductAdapter: RecyclerView.Adapter<BestProductAdapter.BestProductVie
                 tvPrice.text = "${String.format("%.2f", priceProduct)}"
                 tvName.text = product.title
             }
+
         }
     }
 
     private val diffCallback = object : DiffUtil.ItemCallback<Product>() {
-
         override fun areItemsTheSame(oldItem: Product, newItem: Product): Boolean {
             return oldItem.id == newItem.id
+
         }
 
         override fun areContentsTheSame(oldItem: Product, newItem: Product): Boolean {
@@ -35,20 +36,26 @@ class BestProductAdapter: RecyclerView.Adapter<BestProductAdapter.BestProductVie
 
     val differ = AsyncListDiffer(this, diffCallback)
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BestProductViewHolder {
-        return BestProductViewHolder(
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): BestProductsViewHolder {
+        return BestProductsViewHolder(
             ProductRvItemBinding.inflate(
                 LayoutInflater.from(parent.context)
             )
         )
     }
 
-    override fun onBindViewHolder(holder: BestProductViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: BestProductsViewHolder, position: Int) {
         val product = differ.currentList[position]
         holder.bind(product)
+
+        holder.itemView.setOnClickListener {
+            onClick?.invoke(product)
+        }
     }
 
     override fun getItemCount(): Int {
         return differ.currentList.size
     }
+
+    var onClick: ((Product) -> Unit)? = null
 }

@@ -2,14 +2,12 @@ package pt.ipca.keystore.fragments.categories
 
 import android.os.Bundle
 import android.view.View
-import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import com.google.android.material.snackbar.Snackbar
 import com.google.firebase.firestore.FirebaseFirestore
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.flow.collectLatest
-import pt.ipca.keystore.R
 import pt.ipca.keystore.data.Category
 import pt.ipca.keystore.util.Resource
 import pt.ipca.keystore.viewmodel.CategoryModel

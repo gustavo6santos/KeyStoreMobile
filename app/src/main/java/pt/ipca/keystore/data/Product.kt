@@ -1,6 +1,9 @@
 package pt.ipca.keystore.data
 
+import android.os.Parcelable
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class Product(
     val id: String,
     val title: String,
@@ -14,6 +17,6 @@ data class Product(
     val gpuModel: String? = null,
     val ram: Int? = null,
     val osType: String? = null
-){
+):Parcelable{
     constructor():this("0","","","",0f,0f,"",images = emptyList())
 }
