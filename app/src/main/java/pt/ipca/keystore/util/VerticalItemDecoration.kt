@@ -4,7 +4,7 @@ import android.graphics.Rect
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
 
-class VerticalItemCart(private val amount: Int = 30): RecyclerView.ItemDecoration() {
+class VerticalItemDecoration(private val amount:Int = 30): RecyclerView.ItemDecoration() {
 
     override fun getItemOffsets(
         outRect: Rect,
@@ -12,6 +12,6 @@ class VerticalItemCart(private val amount: Int = 30): RecyclerView.ItemDecoratio
         parent: RecyclerView,
         state: RecyclerView.State
     ) {
-         outRect.bottom = amount
+        outRect.bottom = amount
     }
 }

@@ -6,8 +6,10 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import pt.ipca.keystore.data.CartProduct
 import pt.ipca.keystore.data.Product
 import pt.ipca.keystore.databinding.ProductRvItemBinding
+import pt.ipca.keystore.helper.getProductPrice
 
 class BestProductAdapter : RecyclerView.Adapter<BestProductAdapter.BestProductsViewHolder>() {
     inner class BestProductsViewHolder(private val binding: ProductRvItemBinding) :
@@ -15,7 +17,7 @@ class BestProductAdapter : RecyclerView.Adapter<BestProductAdapter.BestProductsV
         fun bind(product: Product) {
             binding.apply {
                 Glide.with(itemView).load(product.images[0]).into(imgProduct)
-                val priceProduct = product.price
+                val priceProduct = product.price.getProductPrice(product.price)
                 tvPrice.text = "${String.format("%.2f", priceProduct)}"
                 tvName.text = product.title
             }

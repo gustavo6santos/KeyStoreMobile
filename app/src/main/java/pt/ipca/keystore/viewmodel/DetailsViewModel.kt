@@ -1,6 +1,7 @@
 package pt.ipca.keystore.fragments.shopping
 
 import android.util.Log
+import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -21,53 +22,60 @@ class DetailsViewModel @Inject constructor(
     private val firestore: FirebaseFirestore,
     private val auth: FirebaseAuth,
     private val firebaseCommon: FirebaseCommon
-) : ViewModel() {
+    ): ViewModel() {
 
-    private val _addToCart = MutableStateFlow<Resource<CartProduct>>(Resource.Unspecified())
-    val addToCart = _addToCart.asStateFlow()
+        private val _addToCart = MutableStateFlow<Resource<CartProduct>>(Resource.Unspecified())
+        val addToCart = _addToCart.asStateFlow()
 
-    fun addUpdateProductInCart(cartProduct: CartProduct) {
+    fun addUpdateProductInCart(cartProduct: CartProduct){
+
         viewModelScope.launch { _addToCart.emit(Resource.Loading()) }
-        firestore.collection("user").document(auth.uid!!).collection("cart")
-            .whereEqualTo("product.id", cartProduct.product.id).get()
+
+            firestore.collection("user").document(auth.uid!!)
+            .collection("cart")
+            .whereEqualTo("product.id",cartProduct.product.id).get()
             .addOnSuccessListener {
                 it.documents.let {
-                    if (it.isEmpty()) { //Add new product
+                    if(it.isEmpty()){
                         addNewProduct(cartProduct)
-                    } else {
+                    }
+                    else{
                         val product = it.first().toObject(CartProduct::class.java)
                         if(product == cartProduct){
-                            val documentId = it.first().id
-                            increaseQuantity(documentId, cartProduct)
-                        } else { //Add new product
+                            val documentId =it.first().id
+                            increaseQuantity(documentId,cartProduct)
+                        }else{
                             addNewProduct(cartProduct)
                         }
                     }
                 }
-            }.addOnFailureListener {
-                viewModelScope.launch { _addToCart.emit(Resource.Error(it.message.toString())) }
-            }
+            }.addOnFailureListener{
+                    viewModelScope.launch { _addToCart.emit(Resource.Error(it.message.toString())) }
+                }
     }
 
-    private fun addNewProduct(cartProduct: CartProduct) {
-        firebaseCommon.addProductToCart(cartProduct) { addedProduct, e ->
+    private fun addNewProduct(cartProduct: CartProduct){
+        firebaseCommon.addProductToCart(cartProduct) { addedProduct, e->
             viewModelScope.launch {
                 if (e == null)
                     _addToCart.emit(Resource.Success(addedProduct!!))
                 else
                     _addToCart.emit(Resource.Error(e.message.toString()))
             }
+
         }
     }
 
-    private fun increaseQuantity(documentId: String, cartProduct: CartProduct) {
-        firebaseCommon.increaseQuantity(documentId) { _, e ->
+    private fun increaseQuantity(documentId: String, cartProduct: CartProduct){
+        firebaseCommon.increaseQuantity(documentId){ _, e ->
             viewModelScope.launch {
                 if (e == null)
                     _addToCart.emit(Resource.Success(cartProduct))
                 else
                     _addToCart.emit(Resource.Error(e.message.toString()))
             }
+
         }
+
     }
 }
