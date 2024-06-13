@@ -13,6 +13,12 @@
         <action
             android:id="@+id/action_homeFragment_to_productDetailsFragment"
             app:destination="@id/productDetailsFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment2"
+            app:destination="@id/profileFragment2" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
@@ -23,7 +29,11 @@
         android:id="@+id/cartFragment"
         android:name="pt.ipca.keystore.fragments.shopping.CartFragment"
         android:label="CartFragment"
-        tools:layout="@layout/fragment_cart"/>
+        tools:layout="@layout/fragment_cart">
+        <action
+            android:id="@+id/action_cartFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/productDetailsFragment"
@@ -34,4 +44,8 @@
             android:name="product"
             app:argType="pt.ipca.keystore.data.Product" />
     </fragment>
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="pt.ipca.keystore.fragments.shopping.ProfileFragment"
+        android:label="ProfileFragment" />
 </navigation>

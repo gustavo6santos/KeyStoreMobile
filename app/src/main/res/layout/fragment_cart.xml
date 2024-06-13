@@ -164,21 +164,42 @@
             android:visibility="gone">
 
 
+            <ImageView
+                android:id="@+id/imageEmptyBoxTexture"
+                android:layout_width="200dp"
+                android:layout_height="250dp"
+                app:layout_constraintBottom_toBottomOf="@id/imageEmptyBox"
+                app:layout_constraintTop_toTopOf="@id/imageEmptyBox"
+                app:layout_constraintStart_toStartOf="@id/imageEmptyBox"
+                app:layout_constraintEnd_toEndOf="@id/imageEmptyBox"/>
+
+            <ImageView
+                android:id="@+id/imageEmptyBox"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginBottom="130dp"
+                android:src="@drawable/logokeystore"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/poppins_light"
                 android:gravity="center"
                 android:text="Your shopping cart is empty"
-                android:textColor="@color/black"
-                android:textSize="15sp"
-                app:layout_constraintTop_toBottomOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"/>
+                android:textColor="@color/white"
+                android:textSize="19sp"
+                app:layout_constraintTop_toBottomOf="@id/imageEmptyBoxTexture"
+                app:layout_constraintStart_toStartOf="@id/imageEmptyBoxTexture"
+                app:layout_constraintEnd_toEndOf="@id/imageEmptyBoxTexture"/>
 
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

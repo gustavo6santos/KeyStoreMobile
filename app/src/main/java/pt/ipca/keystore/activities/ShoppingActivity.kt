@@ -33,10 +33,10 @@ class ShoppingActivity : AppCompatActivity() {
         var navController = findNavController(R.id.shoppingHostFragment)
         binding.bottomNavigation.setupWithNavController(navController)
 
-        /*
+
         lifecycleScope.launchWhenStarted {
             viewModel.cartProducts.collectLatest {
-                when(it){
+                /*when(it){
                     is Resource.Success ->{
                         val count = it.data?.size?: 0
                         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottomNavigation)
@@ -47,11 +47,13 @@ class ShoppingActivity : AppCompatActivity() {
                     }
                     else -> Unit
                 }
+
+                 */
             }
         }
 
 
-         */
+
 
     }
 }
