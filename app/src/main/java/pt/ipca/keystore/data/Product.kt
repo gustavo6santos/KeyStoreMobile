@@ -6,6 +6,7 @@ import kotlinx.parcelize.Parcelize
 @Parcelize
 data class Product(
     val id: String,
+    val gameKey: String,
     val title: String,
     val category: String,
     val genre: String,
@@ -18,5 +19,5 @@ data class Product(
     val ram: Int? = null,
     val osType: String? = null
 ):Parcelable{
-    constructor():this("0","","","",0f,0f,"",images = emptyList())
+    constructor():this("0","","","","",0f,0f,"",images = emptyList())
 }

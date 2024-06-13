@@ -13,9 +13,6 @@
         <action
             android:id="@+id/action_homeFragment_to_productDetailsFragment"
             app:destination="@id/productDetailsFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_profileFragment2"
-            app:destination="@id/profileFragment2" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
@@ -61,7 +58,37 @@
             app:argType="pt.ipca.keystore.data.CartProduct[]" />
     </fragment>
     <fragment
-        android:id="@+id/profileFragment2"
+        android:id="@+id/profileFragment"
         android:name="pt.ipca.keystore.fragments.shopping.ProfileFragment"
-        android:label="ProfileFragment" />
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_allOrdersFragment"
+            app:destination="@id/allOrdersFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_specsFragment"
+            app:destination="@id/specsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/allOrdersFragment"
+        android:name="pt.ipca.keystore.fragments.settings.AllOrdersFragment"
+        android:label="AllOrdersFragment" >
+        <action
+            android:id="@+id/action_allOrdersFragment_to_orderDetailFragment"
+            app:destination="@id/orderDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/orderDetailFragment"
+        android:name="pt.ipca.keystore.fragments.settings.OrderDetailFragment"
+        android:label="OrderDetailFragment" >
+        <argument
+            android:name="order"
+            app:argType="pt.ipca.keystore.data.Order" />
+    </fragment>
+    <fragment
+        android:id="@+id/specsFragment"
+        android:name="pt.ipca.keystore.fragments.shopping.SpecsFragment"
+        android:label="SpecsFragment"
+        tools:layout="@layout/fragment_s"/>
+
 </navigation>

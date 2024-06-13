@@ -40,7 +40,6 @@
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
 
-
         <LinearLayout
             android:id="@+id/linearTitlePrice"
             android:layout_width="0dp"
@@ -124,6 +123,23 @@
             app:layout_constraintStart_toStartOf="@id/linearProductPref"
             app:layout_constraintTop_toBottomOf="@id/linearProductPref"
             app:layout_constraintVertical_bias="0.044"
+            app:spinning_bar_color="@color/button_login_color" />
+
+        <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+            android:id="@+id/buttonCheckCompatibility"
+            android:layout_width="141dp"
+            android:layout_height="39dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_login"
+            android:text="Check Compatibility"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@id/buttonAddToCart"
+            app:layout_constraintStart_toStartOf="@id/buttonAddToCart"
+            app:layout_constraintTop_toBottomOf="@id/buttonAddToCart"
             app:spinning_bar_color="@color/button_login_color" />
 
         <LinearLayout
@@ -224,17 +240,6 @@
             </LinearLayout>
 
         </LinearLayout>
-
-        <ImageView
-            android:id="@+id/imageClose"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_margin="10dp"
-            android:padding="5dp"
-            android:src="@drawable/ic_close"
-            app:tint="@color/g_black"
-            tools:layout_editor_absoluteX="316dp"
-            tools:layout_editor_absoluteY="22dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

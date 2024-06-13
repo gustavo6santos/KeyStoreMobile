@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- CPUs Intel -->
+    <string-array name="cpu_model_options">
+        <item name="Intel_Core_i3_8100" bench="5000">Intel Core i3-8100</item>
+        <item name="Intel_Core_i3_9100F" bench="5500">Intel Core i3-9100F</item>
+        <item name="Intel_Core_i3_10100" bench="6000">Intel Core i3-10100</item>
+        <item name="Intel_Core_i3_10320" bench="7000">Intel Core i3-10320</item>
+        <item name="Intel_Core_i3_12100" bench="8000">Intel Core i3-12100</item>
+        <item name="Intel_Core_i5_8400" bench="9000">Intel Core i5-8400</item>
+        <item name="Intel_Core_i5_9400F" bench="9500">Intel Core i5-9400F</item>
+        <item name="Intel_Core_i5_9600K" bench="12000">Intel Core i5-9600K</item>
+        <item name="Intel_Core_i5_10400" bench="11000">Intel Core i5-10400</item>
+        <item name="Intel_Core_i5_10600K" bench="13000">Intel Core i5-10600K</item>
+        <item name="Intel_Core_i5_11400" bench="12000">Intel Core i5-11400</item>
+        <item name="Intel_Core_i5_11600K" bench="14000">Intel Core i5-11600K</item>
+        <item name="Intel_Core_i5_12400" bench="13000">Intel Core i5-12400</item>
+        <item name="Intel_Core_i5_12600K" bench="16000">Intel Core i5-12600K</item>
+        <item name="Intel_Core_i7_8700K" bench="15000">Intel Core i7-8700K</item>
+        <item name="Intel_Core_i7_9700K" bench="16000">Intel Core i7-9700K</item>
+        <item name="Intel_Core_i7_10700K" bench="18000">Intel Core i7-10700K</item>
+        <item name="Intel_Core_i7_11700K" bench="19000">Intel Core i7-11700K</item>
+        <item name="Intel_Core_i7_12700K" bench="20000">Intel Core i7-12700K</item>
+        <item name="Intel_Core_i9_9900K" bench="20000">Intel Core i9-9900K</item>
+        <item name="Intel_Core_i9_10900K" bench="22000">Intel Core i9-10900K</item>
+        <item name="Intel_Core_i9_11900K" bench="23000">Intel Core i9-11900K</item>
+        <item name="Intel_Core_i9_12900K" bench="24000">Intel Core i9-12900K</item>
+        <item name="AMD_Ryzen_3_2200G" bench="5000">AMD Ryzen 3 2200G</item>
+        <item name="AMD_Ryzen_3_3200G" bench="5500">AMD Ryzen 3 3200G</item>
+        <item name="AMD_Ryzen_3_3100" bench="6000">AMD Ryzen 3 3100</item>
+        <item name="AMD_Ryzen_3_3300X" bench="7000">AMD Ryzen 3 3300X</item>
+        <item name="AMD_Ryzen_5_2600" bench="11000">AMD Ryzen 5 2600</item>
+        <item name="AMD_Ryzen_5_3600" bench="13000">AMD Ryzen 5 3600</item>
+        <item name="AMD_Ryzen_5_5600X" bench="15000">AMD Ryzen 5 5600X</item>
+        <item name="AMD_Ryzen_5_1600_AF" bench="10000">AMD Ryzen 5 1600 AF</item>
+        <item name="AMD_Ryzen_5_3400G" bench="9000">AMD Ryzen 5 3400G</item>
+        <item name="AMD_Ryzen_5_4500" bench="12000">AMD Ryzen 5 4500</item>
+        <item name="AMD_Ryzen_5_4600G" bench="13000">AMD Ryzen 5 4600G</item>
+        <item name="AMD_Ryzen_5_5500" bench="14000">AMD Ryzen 5 5500</item>
+        <item name="AMD_Ryzen_5_5600G" bench="15000">AMD Ryzen 5 5600G</item>
+        <item name="AMD_Ryzen_7_2700X" bench="14000">AMD Ryzen 7 2700X</item>
+        <item name="AMD_Ryzen_7_3700X" bench="18000">AMD Ryzen 7 3700X</item>
+        <item name="AMD_Ryzen_7_5800X" bench="20000">AMD Ryzen 7 5800X</item>
+        <item name="AMD_Ryzen_7_1700" bench="13000">AMD Ryzen 7 1700</item>
+        <item name="AMD_Ryzen_7_3700G" bench="16000">AMD Ryzen 7 3700G</item>
+        <item name="AMD_Ryzen_7_5700G" bench="19000">AMD Ryzen 7 5700G</item>
+        <item name="AMD_Ryzen_9_3900X" bench="22000">AMD Ryzen 9 3900X</item>
+        <item name="AMD_Ryzen_9_5900X" bench="24000">AMD Ryzen 9 5900X</item>
+        <item name="AMD_Ryzen_9_5950X" bench="26000">AMD Ryzen 9 5950X</item>
+        <item name="AMD_Ryzen_9_3950X" bench="25000">AMD Ryzen 9 3950X</item>
+        <item name="AMD_Ryzen_9_5900" bench="23000">AMD Ryzen 9 5900</item>
+    </string-array>
+
+    <!-- GPUs NVIDIA -->
+    <string-array name="gpu_model_options">
+        <item name="NVIDIA_GTX_1050" bench="4000">NVIDIA GTX 1050</item>
+        <item name="NVIDIA_GTX_1050_Ti" bench="4500">NVIDIA GTX 1050 Ti</item>
+        <item name="NVIDIA_GTX_1060_3GB" bench="5000">NVIDIA GTX 1060 3GB</item>
+        <item name="NVIDIA_GTX_1060_6GB" bench="6000">NVIDIA GTX 1060 6GB</item>
+        <item name="NVIDIA_GTX_1070" bench="8000">NVIDIA GTX 1070</item>
+        <item name="NVIDIA_GTX_1070_Ti" bench="8500">NVIDIA GTX 1070 Ti</item>
+        <item name="NVIDIA_GTX_1080" bench="9000">NVIDIA GTX 1080</item>
+        <item name="NVIDIA_GTX_1080_Ti" bench="10000">NVIDIA GTX 1080 Ti</item>
+        <item name="NVIDIA_GTX_1650" bench="5000">NVIDIA GTX 1650</item>
+        <item name="NVIDIA_GTX_1650_Super" bench="6000">NVIDIA GTX 1650 Super</item>
+        <item name="NVIDIA_GTX_1660" bench="7000">NVIDIA GTX 1660</item>
+        <item name="NVIDIA_GTX_1660_Ti" bench="8000">NVIDIA GTX 1660 Ti</item>
+        <item name="NVIDIA_RTX_2060" bench="13000">NVIDIA RTX 2060</item>
+        <item name="NVIDIA_RTX_2060_Super" bench="14000">NVIDIA RTX 2060 Super</item>
+        <item name="NVIDIA_RTX_2070" bench="15000">NVIDIA RTX 2070</item>
+        <item name="NVIDIA_RTX_2070_Super" bench="16000">NVIDIA RTX 2070 Super</item>
+        <item name="NVIDIA_RTX_2080" bench="18000">NVIDIA RTX 2080</item>
+        <item name="NVIDIA_RTX_2080_Super" bench="19000">NVIDIA RTX 2080 Super</item>
+        <item name="NVIDIA_RTX_2080_Ti" bench="20000">NVIDIA RTX 2080 Ti</item>
+        <item name="NVIDIA_RTX_3060" bench="16000">NVIDIA RTX 3060</item>
+        <item name="NVIDIA_RTX_3060_Ti" bench="18000">NVIDIA RTX 3060 Ti</item>
+        <item name="NVIDIA_RTX_3070" bench="20000">NVIDIA RTX 3070</item>
+        <item name="NVIDIA_RTX_3070_Ti" bench="21000">NVIDIA RTX 3070 Ti</item>
+        <item name="NVIDIA_RTX_3080" bench="22000">NVIDIA RTX 3080</item>
+        <item name="NVIDIA_RTX_3080_Ti" bench="23000">NVIDIA RTX 3080 Ti</item>
+        <item name="NVIDIA_RTX_3090" bench="24000">NVIDIA RTX 3090</item>
+        <item name="NVIDIA_RTX_3090_Ti" bench="25000">NVIDIA RTX 3090 Ti</item>
+        <item name="AMD_Radeon_RX_550" bench="3000">AMD Radeon RX 550</item>
+        <item name="AMD_Radeon_RX_560" bench="4000">AMD Radeon RX 560</item>
+        <item name="AMD_Radeon_RX_570" bench="5000">AMD Radeon RX 570</item>
+        <item name="AMD_Radeon_RX_580" bench="6000">AMD Radeon RX 580</item>
+        <item name="AMD_Radeon_RX_590" bench="7000">AMD Radeon RX 590</item>
+        <item name="AMD_Radeon_RX_Vega_56" bench="11000">AMD Radeon RX Vega 56</item>
+        <item name="AMD_Radeon_RX_Vega_64" bench="12000">AMD Radeon RX Vega 64</item>
+        <item name="AMD_Radeon_RX_5500_XT" bench="8000">AMD Radeon RX 5500 XT</item>
+        <item name="AMD_Radeon_RX_5600_XT" bench="10000">AMD Radeon RX 5600 XT</item>
+        <item name="AMD_Radeon_RX_5700" bench="12000">AMD Radeon RX 5700</item>
+        <item name="AMD_Radeon_RX_5700_XT" bench="14000">AMD Radeon RX 5700 XT</item>
+        <item name="AMD_Radeon_RX_6600_XT" bench="15000">AMD Radeon RX 6600 XT</item>
+        <item name="AMD_Radeon_RX_6700_XT" bench="17000">AMD Radeon RX 6700 XT</item>
+        <item name="AMD_Radeon_RX_6800" bench="18000">AMD Radeon RX 6800</item>
+        <item name="AMD_Radeon_RX_6800_XT" bench="20000">AMD Radeon RX 6800 XT</item>
+        <item name="AMD_Radeon_RX_6900_XT" bench="22000">AMD Radeon RX 6900 XT</item>
+        <!-- Adicione os modelos de GPUs NVIDIA com seus respectivos benchmarks -->
+    </string-array>
+
+    <string-array name="ram_options">
+        <item>2GB</item>
+        <item>4GB</item>
+        <item>8GB</item>
+        <item>16GB</item>
+        <item>32GB</item>
+        <item>64GB</item>
+        <item>128GB</item>
+    </string-array>
+
+    <string-array name="os_type_options">
+        <item>Windows</item>
+        <item>MacOS</item>
+        <item>Linux</item>
+        <item>Android</item>
+        <item>iOS</item>
+        <item>Chrome OS</item>
+        <item>Other</item>
+    </string-array>
+</resources>

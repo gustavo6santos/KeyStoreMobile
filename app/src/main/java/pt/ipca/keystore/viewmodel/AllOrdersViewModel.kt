@@ -12,7 +12,7 @@ import pt.ipca.keystore.data.Order
 import pt.ipca.keystore.util.Resource
 import javax.inject.Inject
 @HiltViewModel
-class OrdersViewModel @Inject constructor(
+class AllOrdersViewModel @Inject constructor(
     private val firestore: FirebaseFirestore,
     private val auth: FirebaseAuth
 

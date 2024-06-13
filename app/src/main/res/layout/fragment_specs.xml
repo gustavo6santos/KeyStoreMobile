@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbarSpecs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageSpecsClose"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_close"
+                android:scaleType="centerInside"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:tint="@color/black" />
+
+            <TextView
+                android:id="@+id/tvSpecs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:text="Specs"
+                android:textSize="18sp"
+                android:textColor="@color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/imageSpecsClose"
+                app:layout_constraintStart_toEndOf="@id/imageSpecsClose"
+                app:layout_constraintTop_toTopOf="@+id/imageSpecsClose" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <View
+        android:id="@+id/topLine"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/white_background"
+        android:backgroundTint="@color/g_blue_gray200"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@id/toolbarSpecs" />
+
+    <TextView
+        android:id="@+id/labelCpuModel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="CPU Model"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/topLine"
+        android:layout_marginTop="15dp"/>
+
+    <Spinner
+        android:id="@+id/cpuModel"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@drawable/white_background"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/labelCpuModel"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/labelGpuModel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="GPU Model"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/cpuModel"
+        android:layout_marginTop="15dp"/>
+
+    <Spinner
+        android:id="@+id/gpuModel"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@drawable/white_background"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/labelGpuModel"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/labelRamModel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="RAM"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/gpuModel"
+        android:layout_marginTop="15dp"/>
+
+    <Spinner
+        android:id="@+id/ramModel"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@drawable/white_background"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/labelRamModel"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/labelOsTypeModel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="OS Type"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/ramModel"
+        android:layout_marginTop="15dp"/>
+
+    <Spinner
+        android:id="@+id/osTypeModel"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:background="@drawable/white_background"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/labelOsTypeModel"
+        android:layout_marginTop="5dp"/>
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="0.484"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@+id/osTypeModel"
+        android:orientation="horizontal"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/guideline1"
+        app:layout_constraintTop_toBottomOf="@id/linear"
+        app:layout_constraintVertical_bias="0.494"
+        android:layout_marginTop="45dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/buttonSave"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/blue_background"
+            android:fontFamily="@font/poppins_thin"
+            android:text="Save"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="12dp"
+            android:visibility="visible"
+            android:layout_weight="1"
+            android:layout_marginStart="5dp" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbarAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/g_gray700"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="45dp"
+        android:visibility="gone"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.04136253" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.96" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,4 +1,4 @@
 package pt.ipca.keystore.adpters
 
-class OrdersAdapter {
+class ProfileSpecsAdapter {
 }
