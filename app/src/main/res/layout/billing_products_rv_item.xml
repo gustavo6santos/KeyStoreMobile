@@ -22,9 +22,9 @@
 
         <ImageView
             android:id="@+id/imageCartProduct"
-            android:layout_width="80dp"
-            android:layout_height="75dp"
-            android:layout_marginBottom="5dp"
+            android:layout_width="70dp"
+            android:layout_height="105dp"
+
             app:layout_constraintBottom_toTopOf="@+id/topLine"
             app:layout_constraintStart_toStartOf="parent"
             android:scaleType="centerCrop"
@@ -64,6 +64,7 @@
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginTop="5dp"
+            android:src="@color/g_blue"
             app:layout_constraintStart_toStartOf="@id/tvProductCartPrice"
             app:layout_constraintTop_toBottomOf="@id/tvProductCartPrice"/>
 
@@ -72,7 +73,7 @@
             android:layout_width="15dp"
             android:layout_height="15dp"
             android:layout_marginStart="5dp"
-
+            android:src="@color/g_blue_gray200"
             app:layout_constraintStart_toEndOf="@id/imageCartProductColor"
             app:layout_constraintTop_toTopOf="@id/imageCartProductColor"/>
 

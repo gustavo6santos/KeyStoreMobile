@@ -13,18 +13,16 @@
         <action
             android:id="@+id/action_homeFragment_to_productDetailsFragment"
             app:destination="@id/productDetailsFragment" />
-        <action
-            android:id="@+id/action_homeFragment_to_profileFragment2"
-            app:destination="@id/profileFragment2" />
-        <action
-            android:id="@+id/action_homeFragment_to_searchFragment"
-            app:destination="@id/searchFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
         android:name="pt.ipca.keystore.fragments.shopping.SearchFragment"
         android:label="SearchFragment"
-        tools:layout="@layout/fragment_search"/>
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_productDetailsFragment"
+            app:destination="@id/productDetailsFragment" />
+    </fragment>
     <fragment
         android:id="@+id/cartFragment"
         android:name="pt.ipca.keystore.fragments.shopping.CartFragment"
@@ -33,6 +31,9 @@
         <action
             android:id="@+id/action_cartFragment_to_productDetailsFragment"
             app:destination="@id/productDetailsFragment" />
+        <action
+            android:id="@+id/action_cartFragment_to_billingFragment"
+            app:destination="@id/billingFragment" />
     </fragment>
 
     <fragment
@@ -45,7 +46,15 @@
             app:argType="pt.ipca.keystore.data.Product" />
     </fragment>
     <fragment
-        android:id="@+id/profileFragment2"
-        android:name="pt.ipca.keystore.fragments.shopping.ProfileFragment"
-        android:label="ProfileFragment" />
+        android:id="@+id/billingFragment"
+        android:name="pt.ipca.keystore.fragments.shopping.BillingFragment"
+        android:label="BillingFragment"
+        tools:layout="@layout/fragment_billing">
+        <argument
+            android:name="totalPrice"
+            app:argType="float" />
+        <argument
+            android:name="products"
+            app:argType="pt.ipca.keystore.data.CartProduct[]" />
+    </fragment>
 </navigation>

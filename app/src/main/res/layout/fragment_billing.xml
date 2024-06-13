@@ -54,21 +54,21 @@
             android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/toolbarBilling"
             app:layout_constraintStart_toStartOf="@id/guideline1"
-            android:textColor="@color/black"
-            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:textSize="25sp"
             android:layout_marginTop="10dp"/>
 
         <TextView
             android:id="@+id/tvPaymentExplanation"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Keline does not support virtual payments. You can pay when you receive your order."
+            android:text="MB Way / Credit Cart / Debit Card"
             android:fontFamily="@font/sf_pro_display"
             app:layout_constraintTop_toBottomOf="@id/tvPaymentMethods"
             app:layout_constraintStart_toStartOf="@id/guideline1"
             app:layout_constraintEnd_toEndOf="@id/guideline2"
-            android:textColor="@color/black"
-            android:textSize="15sp" />
+            android:textColor="@color/white"
+            android:textSize="19sp" />
 
         <View
             android:id="@+id/topLine"
@@ -125,8 +125,8 @@
                 android:layout_marginBottom="15dp"
                 android:fontFamily="@font/sf_pro_display"
                 android:text="Total"
-                android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textSize="19sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -140,8 +140,8 @@
                 android:layout_marginBottom="15dp"
                 android:fontFamily="@font/sf_pro_display"
                 android:text="$150"
-                android:textColor="@color/black"
-                android:textSize="16sp"
+                android:textColor="@color/white"
+                android:textSize="19sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
