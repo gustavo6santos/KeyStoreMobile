@@ -14,6 +14,8 @@ import kotlinx.coroutines.flow.collectLatest
 import pt.ipca.keystore.R
 import pt.ipca.keystore.databinding.ActivityShoppingBinding
 import pt.ipca.keystore.util.Resource
+import pt.ipca.keystore.viewmodel.CartViewModel
+
 //import pt.ipca.keystore.viewmodel.CartViewModel
 
 @AndroidEntryPoint
@@ -23,7 +25,7 @@ class ShoppingActivity : AppCompatActivity() {
         ActivityShoppingBinding.inflate(layoutInflater)
     }
 
-    //val viewModel by viewModels<CartViewModel>()
+    val viewModel by viewModels<CartViewModel>()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
@@ -31,6 +33,25 @@ class ShoppingActivity : AppCompatActivity() {
         var navController = findNavController(R.id.shoppingHostFragment)
         binding.bottomNavigation.setupWithNavController(navController)
 
+        /*
+        lifecycleScope.launchWhenStarted {
+            viewModel.cartProducts.collectLatest {
+                when(it){
+                    is Resource.Success ->{
+                        val count = it.data?.size?: 0
+                        val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottomNavigation)
+                        bottomNavigation.getOrCreateBadge(R.id.cartFragment).apply {
+                            number = count
+                            backgroundColor = resources.getColor(R.color.g_blue)
+                        }
+                    }
+                    else -> Unit
+                }
+            }
+        }
+
+
+         */
 
     }
 }

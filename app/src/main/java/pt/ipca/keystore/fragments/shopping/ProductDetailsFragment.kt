@@ -51,12 +51,9 @@ class ProductDetailsFragment: Fragment() {
 
         val product = args.product
 
-
-
         binding.imageClose.setOnClickListener {
             findNavController().navigateUp()
         }
-
 
 
         binding.buttonAddToCart.setOnClickListener {
@@ -72,7 +69,7 @@ class ProductDetailsFragment: Fragment() {
 
                     is Resource.Success -> {
                         binding.buttonAddToCart.revertAnimation()
-                        Toast.makeText(requireContext(), it.message, Toast.LENGTH_SHORT).show()
+                      Toast.makeText(requireContext(), "Product was added", Toast.LENGTH_SHORT).show()
                     }
 
                     is Resource.Error -> {
