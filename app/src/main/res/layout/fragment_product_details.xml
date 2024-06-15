@@ -147,6 +147,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="130dp"
+            android:paddingHorizontal="16dp"
             android:orientation="vertical"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -173,7 +174,7 @@
                 android:id="@+id/tvCpuModel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:textColor="@color/black"
                 android:textSize="13sp" />
 
@@ -189,7 +190,7 @@
                 android:id="@+id/tvGpuModel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:textColor="@color/black"
                 android:textSize="13sp" />
 
@@ -205,7 +206,7 @@
                 android:id="@+id/tvRam"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:textColor="@color/black"
                 android:textSize="13sp" />
 
@@ -221,7 +222,7 @@
                 android:id="@+id/tvOsType"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
                 android:textColor="@color/black"
                 android:textSize="13sp" />
 

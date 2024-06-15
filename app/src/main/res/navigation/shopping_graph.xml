@@ -68,6 +68,9 @@
         <action
             android:id="@+id/action_profileFragment_to_specsFragment"
             app:destination="@id/specsFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_personalDetailsFragment"
+            app:destination="@id/personalDetailsFragment" />
     </fragment>
     <fragment
         android:id="@+id/allOrdersFragment"
@@ -90,5 +93,21 @@
         android:name="pt.ipca.keystore.fragments.shopping.SpecsFragment"
         android:label="SpecsFragment"
         tools:layout="@layout/fragment_s"/>
+    <fragment
+        android:id="@+id/personalDetailsFragment"
+        android:name="pt.ipca.keystore.fragments.settings.PersonalDetailsFragment"
+        android:label="PersonalDetailsFragment"
+        tools:layout="@layout/fragment_personal_details" >
+        <action
+            android:id="@+id/action_personalDetailsFragment_to_billingAddressFragment"
+            app:destination="@id/billingAddressFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/billingAddressFragment"
+        android:name="pt.ipca.keystore.fragments.settings.BillingAddressFragment"
+        android:label="BillingAddressFragment"
+        tools:layout="@layout/fragment_billing_address"
+        />
+
 
 </navigation>

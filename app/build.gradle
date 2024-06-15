@@ -41,7 +41,13 @@ android {
 }
 
 dependencies {
-
+    implementation "androidx.work:work-runtime-ktx:2.7.1"
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'
+    implementation 'com.google.android.gms:play-services-location:18.0.0'
+    implementation 'org.osmdroid:osmdroid-android:6.1.10'
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.4.2'
     implementation 'com.google.android.material:material:1.6.1'
@@ -89,3 +95,5 @@ dependencies {
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.5.1'
 
 }
+
+apply plugin: 'com.google.gms.google-services'

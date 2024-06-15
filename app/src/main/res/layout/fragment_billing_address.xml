@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Container for input fields, map, and other UI elements -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Title for the Address Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Billing Address"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center_horizontal"
+            android:padding="8dp" />
+
+        <!-- Input for Street Name -->
+        <EditText
+            android:id="@+id/editTextStreet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:hint="Street"
+            android:inputType="text"/>
+
+        <!-- Input for House Number -->
+        <EditText
+            android:id="@+id/editTextNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:hint="Number"
+            android:inputType="number"/>
+
+        <!-- Input for City -->
+        <EditText
+            android:id="@+id/editTextCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:hint="City"
+            android:inputType="text"/>
+
+        <!-- Input for Country -->
+        <EditText
+            android:id="@+id/editTextCountry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:hint="Country"
+            android:inputType="text"/>
+
+        <!-- Container for Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingVertical="4dp">
+
+            <!-- Button for Geocoding -->
+            <Button
+                android:id="@+id/buttonGeocode"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/location_buttons"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:text="Find on Map"
+                android:layout_marginEnd="4dp"/>
+
+            <!-- Button for Using Current Location -->
+            <Button
+                android:id="@+id/buttonUseCurrentLocation"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/location_buttons"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:text="Use Current Location"
+                android:layout_marginStart="4dp"/>
+
+        </LinearLayout>
+
+        <!-- MapView for displaying the location -->
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+</FrameLayout>
