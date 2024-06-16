@@ -148,12 +148,37 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
+        <!-- Add Payment Button -->
+        <Button
+            android:id="@+id/buttonAddPayment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Add Payment Option"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white"
+            app:layout_constraintTop_toBottomOf="@id/totalBoxContainer"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"/>
+
+        <!-- RecyclerView for Payment Options -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPaymentOptions"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/buttonAddPayment"
+            app:layout_constraintStart_toStartOf="@id/guideline1"
+            app:layout_constraintEnd_toEndOf="@id/guideline2"
+            app:layout_constraintBottom_toTopOf="@id/buttonPlaceOrder"
+            android:orientation="vertical"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
         <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/buttonPlaceOrder"
             android:layout_width="0dp"
             android:layout_height="@dimen/mediumButtonHeight"
             style="@style/blueButtonStyle"
-            app:layout_constraintTop_toBottomOf="@id/totalBoxContainer"
+            app:layout_constraintTop_toBottomOf="@id/recyclerViewPaymentOptions"
             app:layout_constraintStart_toStartOf="@id/totalBoxContainer"
             app:layout_constraintEnd_toEndOf="@id/totalBoxContainer"
             app:layout_constraintBottom_toBottomOf="parent"

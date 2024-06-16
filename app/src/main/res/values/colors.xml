@@ -22,5 +22,7 @@
     <color name="g_gray500">#969899</color>
     <color name="g_orange_yellow">#F8BA00</color>
     <color name="color_bottom">#842aa2</color>
+    <color name="default_card_background">#FFFFFF</color>
+    <color name="selected_card_background">#FFD700</color>
 
 </resources>

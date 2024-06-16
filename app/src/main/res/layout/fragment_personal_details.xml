@@ -10,35 +10,92 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <!-- Input for Name -->
-        <EditText
-            android:id="@+id/editTextName"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Name"
-            android:inputType="text"/>
+            android:text="Personal details:"
+            android:layout_marginVertical="5dp"
+            android:textColor="@color/white"
+            android:textSize="32dp"/>
 
-        <!-- Input for Email -->
-        <EditText
-            android:id="@+id/editTextEmail"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Email"
-            android:inputType="textEmailAddress"/>
+            android:text="Email:"
+            android:textSize="12dp"
+            android:textColor="#BABABA"
+            android:layout_marginTop="10dp"/>
 
-        <Space
-            android:layout_width="0dp"
+        <TextView
+            android:id="@+id/personalDetailsEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:text="Email"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name:"
+            android:textColor="#BABABA"
+            android:textSize="12dp"
+            android:layout_marginTop="10dp"/>
+
+        <!-- Container for Name and Edit Button -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+
+            <!-- Input for Name -->
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/white"
+                android:textColorHint="@color/white"
+                android:hint="Name"
+                android:inputType="text"/>
+
+            <!-- Edit Button -->
+            <Button
+                android:id="@+id/buttonEditName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:textColor="@color/white"
+                android:text="Edit"/>
+        </LinearLayout>
+
+        <!-- Button for adding a new payment option -->
+        <Button
+            android:id="@+id/buttonAddPayment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Add Payment Option"
+            android:background="@drawable/location_buttons"
+            android:layout_marginTop="16dp"
+            android:textColor="@color/white" />
+
+        <!-- RecyclerView for listing payment options -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPaymentOptions"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1" />
+            android:layout_weight="1"/>
 
         <!-- Button to navigate to Billing Address Fragment -->
         <Button
             android:id="@+id/buttonNavigateToBilling"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/white"
+            android:text="Edit billing address"
             android:layout_marginBottom="40dp"
-            android:background="@drawable/location_buttons"
-            android:text="Edit billing address"/>
+            android:textColor="@color/white"
+            android:background="@drawable/location_buttons"/>
     </LinearLayout>
 </FrameLayout>

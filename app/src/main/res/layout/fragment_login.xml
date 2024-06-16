@@ -65,7 +65,7 @@
         android:layout_width="317dp"
         android:layout_height="62dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="646dp"
+        android:layout_marginTop="590dp"
         android:background="@drawable/btn_login"
         android:radius="50dp"
         android:text="@string/login"
@@ -84,7 +84,7 @@
         android:layout_width="126dp"
         android:layout_height="37dp"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="721dp"
+        android:layout_marginTop="670dp"
         android:background="@drawable/btn_cancel"
         android:text="@string/Cancel"
         android:textColor="@color/white"
@@ -94,12 +94,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
+    <Button
         android:id="@+id/fyp_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="770dp"
+        android:layout_marginTop="725dp"
+        android:background="@android:color/transparent"
         android:text="@string/FYP"
         android:textColor="@color/black"
         android:textSize="15sp"

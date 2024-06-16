@@ -24,6 +24,7 @@
             style="@style/MediumTextViewThin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             android:layout_marginStart="5dp"
             android:layout_weight="1"
             tools:text="@tools:sample/lorem" />
@@ -31,6 +32,7 @@
         <TextView
             android:id="@+id/tvOrderDate"
             style="@style/MediumTextViewThin"
+            android:textColor="@color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
@@ -54,6 +56,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             style="@style/MediumTextViewThin"
+            android:textColor="@color/white"
             android:text="Game Key:"
             android:textStyle="bold"
             android:layout_marginEnd="5dp" />
@@ -62,6 +65,7 @@
             android:id="@+id/tvGameKey"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textColor="@color/white"
             style="@style/MediumTextViewThin"
             tools:text="B4M5-M3AJ-FAR8-19FA" />
     </LinearLayout>

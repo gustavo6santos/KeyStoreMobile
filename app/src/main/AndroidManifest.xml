@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="pt.ipca.keystore">
 
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -22,6 +23,7 @@
         android:theme="@style/Theme.KeyStore"
         android:requestLegacyExternalStorage="true"
         tools:targetApi="31">
+
         <activity
             android:name=".activities.LoginRegisterActivity"
             android:exported="true">
@@ -30,10 +32,22 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity android:name=".activities.ShoppingActivity"/>
+
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyDNQKZiIkg0HIspR23cAmerbKZ5LkILjG0"/>
-    </application>
+            android:value="YOUR_API_KEY"/>
 
+        <!-- Add your Firebase Messaging Service here -->
+        <service
+            android:name=".services.MyFirebaseMessagingService"
+            android:exported="true"
+            android:permission="TODO">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+    </application>
 </manifest>
