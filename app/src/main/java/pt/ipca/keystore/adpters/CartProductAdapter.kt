@@ -21,7 +21,7 @@ class CartProductAdapter: RecyclerView.Adapter<CartProductAdapter.CartProductsVi
                 tvProductCartName.text = cartProduct.product.title
                 tvCartProductQuantity.text = cartProduct.quantity.toString()
                 val priceProduct = cartProduct.product.price.getProductPrice(cartProduct.product.price)
-                tvProductCartPrice.text = "${String.format("%.2f", priceProduct)}"
+                tvProductCartPrice.text = "${String.format("%.2f", priceProduct)} €"
 
             }
         }

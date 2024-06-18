@@ -150,11 +150,7 @@ class MainCategoryFragment : Fragment(R.layout.fragment_main_category) {
 
     private fun setupBestDealsRv() {
         bestDealsAdapter = BestDealsAdapter()
-        binding.rvBestDealsProducts.apply {
-            layoutManager =
-                LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
-            adapter = bestDealsAdapter
-        }
+
     }
 
     private fun hideLoading() {

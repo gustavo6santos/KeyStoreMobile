@@ -166,7 +166,7 @@ class BillingFragment : Fragment() {
             billingViewModel.cards.collectLatest { resource ->
                 when (resource) {
                     is Resource.Loading -> {
-                        // Show loading indicator if needed
+
                     }
                     is Resource.Success -> {
                         cards.clear()

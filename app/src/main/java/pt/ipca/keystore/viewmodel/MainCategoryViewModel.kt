@@ -38,20 +38,20 @@ class MainCategoryViewModel @Inject constructor(
             _specialProducts.emit(Resource.Loading())
         }
 
-        firestore.
-        collection("Products").get().addOnSuccessListener { result ->
+        firestore.collection("Products").get().addOnSuccessListener { result ->
             val specialProductList = result.toObjects(Product::class.java)
+            val reversedProductList = specialProductList.reversed()
 
             viewModelScope.launch {
-                _specialProducts.emit(Resource.Success(specialProductList))
+                _specialProducts.emit(Resource.Success(reversedProductList))
             }
-
-        }.addOnFailureListener{
+        }.addOnFailureListener {
             viewModelScope.launch {
                 _specialProducts.emit(Resource.Error(it.message.toString()))
             }
         }
     }
+
 
     fun fetchBestDeals(){
         viewModelScope.launch {
@@ -97,7 +97,7 @@ class MainCategoryViewModel @Inject constructor(
 }
 
 internal data class PagingInfo(
-    var bestProuctsPage: Long = 1,
+    var bestProuctsPage: Long = 10,
     var oldBestProducts: List<Product> = emptyList(),
     var isPaginEnd: Boolean = false
 )

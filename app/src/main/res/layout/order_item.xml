@@ -51,23 +51,6 @@
         android:orientation="horizontal"
         android:layout_marginTop="5dp">
 
-        <TextView
-            android:id="@+id/tvGameKeyLabel"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            style="@style/MediumTextViewThin"
-            android:textColor="@color/white"
-            android:text="Game Key:"
-            android:textStyle="bold"
-            android:layout_marginEnd="5dp" />
-
-        <TextView
-            android:id="@+id/tvGameKey"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/white"
-            style="@style/MediumTextViewThin"
-            tools:text="B4M5-M3AJ-FAR8-19FA" />
     </LinearLayout>
 
     <View

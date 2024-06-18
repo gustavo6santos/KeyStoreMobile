@@ -53,6 +53,14 @@ class ProductDetailsFragment : Fragment() {
 
         val product = args.product
 
+        if (product.category != "Pc") {
+            binding.productDetailsLayout.visibility = View.GONE
+            binding.buttonCheckCompatibility.visibility = View.GONE
+        } else {
+            binding.productDetailsLayout.visibility = View.VISIBLE
+            binding.buttonCheckCompatibility.visibility = View.VISIBLE
+        }
+
         binding.buttonCheckCompatibility.setOnClickListener {
             val userSpecs = getUserSpecs()
             viewModel.checkCompatibility(userSpecs, product)
@@ -104,7 +112,7 @@ class ProductDetailsFragment : Fragment() {
                 .into(imageProductDetails)
             tvProductName.text = product.title
             tvProductPrice.text = "$ ${product.price}"
-            tvProductDescription.text = product.description
+            tvProductDescription.text = product.genre
             tvCpuModel.text = product.cpuModel
             tvGpuModel.text = product.gpuModel
             tvRam.text = product.ram?.toString()

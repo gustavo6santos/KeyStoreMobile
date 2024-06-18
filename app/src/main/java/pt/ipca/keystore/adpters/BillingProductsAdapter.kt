@@ -19,9 +19,9 @@ class BillingProductsAdapter : RecyclerView.Adapter<BillingProductsAdapter.Billi
                 Glide.with(itemView).load(billingProduct.product.images[0]).into(imageCartProduct)
                 tvProductCartName.text = billingProduct.product.title
                 tvBillingProductQuantity.text = billingProduct.quantity.toString()
-
+                tvGameKey.text = billingProduct.product.gameKey
                 val priceProduct = billingProduct.product.price.getProductPrice(billingProduct.product.price)
-                tvProductCartPrice.text = "$ ${String.format("%.2f", priceProduct)}"
+                tvProductCartPrice.text = "${String.format("%.2f", priceProduct)} €"
             }
         }
     }
