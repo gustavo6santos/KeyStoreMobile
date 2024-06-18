@@ -37,6 +37,7 @@ class OrderDetailFragment: Fragment() {
         binding.apply {
             tvOrderId.text = "Order# ${order.orderId}"
             tvTotalPrice.text = "${order.totalPrice }"
+
         }
 
         billingProductsAdapter.differ.submitList(order.products)

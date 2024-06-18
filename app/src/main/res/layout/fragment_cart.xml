@@ -8,7 +8,8 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@drawable/background_fade">
 
 
         <androidx.appcompat.widget.Toolbar
@@ -117,7 +118,7 @@
                 android:layout_marginBottom="15dp"
                 android:fontFamily="@font/sf_pro_display"
                 android:text="Total"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -133,7 +134,7 @@
                 android:layout_marginBottom="15dp"
                 android:fontFamily="@font/sf_pro_display"
                 android:text="$150"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"

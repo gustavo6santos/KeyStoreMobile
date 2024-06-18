@@ -5,82 +5,82 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     app:cardElevation="0dp"
     app:cardCornerRadius="5dp"
-
-    app:cardUseCompatPadding="true"
-    >
+    app:cardUseCompatPadding="true">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="114dp">
 
         <ImageView
             android:id="@+id/imageSpecialRvItem"
             android:layout_width="90dp"
             android:layout_height="90dp"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             android:layout_marginStart="16dp"
             android:layout_marginTop="10dp"
-             />
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/tvSpecialProductName"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Scotch Premium"
-            app:layout_constraintStart_toEndOf="@id/imageSpecialRvItem"
-            app:layout_constraintTop_toTopOf="@id/imageSpecialRvItem"
-            android:layout_marginTop="7dp"
             android:layout_marginStart="18dp"
+            android:layout_marginTop="7dp"
+            android:ellipsize="end"
             android:fontFamily="@font/poppins_thin"
-            android:textStyle="bold"
+            android:maxLines="2"
+            android:text="Scotch Premium"
             android:textColor="@color/black"
             android:textSize="17sp"
-            android:maxLines="2"/>
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/imageSpecialRvItem"
+            app:layout_constraintTop_toTopOf="@id/imageSpecialRvItem" />
 
         <TextView
             android:id="@+id/tvSpecialProductPrice"
-            android:layout_width="80dp"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:fontFamily="@font/sf_pro_display"
             android:text="$1600"
-            app:layout_constraintStart_toStartOf="@id/tvSpecialProductName"
-            app:layout_constraintTop_toBottomOf="@id/tvSpecialProductName"
             android:textColor="@color/black"
             android:textSize="12sp"
-            android:fontFamily="@font/sf_pro_display"/>
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvSpecialProductName"
+            app:layout_constraintTop_toBottomOf="@id/tvSpecialProductName" />
 
         <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
             android:id="@+id/btn_add_to_cart"
             android:layout_width="77dp"
             android:layout_height="25dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="25px"
             android:background="@drawable/blue_background"
             android:fontFamily="@font/poppins_light"
             android:text="Add to cart"
+            android:textAllCaps="false"
             android:textColor="@color/white"
             android:textSize="10sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/tvSpecialProductPrice"
-            android:layout_marginTop="10dp"
-            android:textAllCaps="false"
-            />
+            app:layout_constraintTop_toBottomOf="@id/tvSpecialProductPrice" />
 
         <LinearLayout
             android:layout_width="23dp"
             android:layout_height="23dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
             android:background="@drawable/icon_background"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
             <ImageView
                 android:layout_width="10dp"
                 android:layout_height="10dp"
-                android:src="@drawable/ic_favorite"
                 android:layout_gravity="center"
                 android:layout_marginTop="7dp"
-                />
+                android:src="@drawable/ic_favorite" />
         </LinearLayout>
-
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

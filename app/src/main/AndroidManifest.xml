@@ -37,7 +37,7 @@
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_API_KEY"/>
+            android:value="AIzaSyDNY9c6JB0fhl-5cKhXyzxQGRRKyuJwHt8"/>
 
         <!-- Add your Firebase Messaging Service here -->
         <service

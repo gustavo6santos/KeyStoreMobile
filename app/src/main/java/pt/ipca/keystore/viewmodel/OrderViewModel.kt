@@ -18,7 +18,7 @@ import javax.inject.Inject
 class OrderViewModel @Inject constructor(
     private val firestore: FirebaseFirestore,
     private val auth: FirebaseAuth
-): ViewModel() {
+) : ViewModel() {
     private val _order = MutableStateFlow<Resource<Order>>(Resource.Unspecified())
     val order = _order.asStateFlow()
 
@@ -26,24 +26,21 @@ class OrderViewModel @Inject constructor(
         viewModelScope.launch {
             _order.emit(Resource.Loading())
         }
-        firestore.runBatch{batch ->
-
-            //guardar order no user
+        firestore.runBatch { batch ->
+            // Save order to user orders
             firestore.collection("user")
                 .document(auth.uid!!)
                 .collection("orders")
                 .document()
                 .set(order)
 
-
-            //guarder order nas orders
+            // Save order to global orders
             firestore.collection("orders").document().set(order)
 
-            //remover produtos do carrinho quando feito uma compra
-
+            // Remove products from cart after purchase
             firestore.collection("user").document(auth.uid!!).collection("cart").get()
                 .addOnSuccessListener {
-                    it.documents.forEach{
+                    it.documents.forEach {
                         it.reference.delete()
                     }
                 }
@@ -51,11 +48,10 @@ class OrderViewModel @Inject constructor(
             viewModelScope.launch {
                 _order.emit(Resource.Success(order))
             }
-        }.addOnFailureListener{
+        }.addOnFailureListener {
             viewModelScope.launch {
                 _order.emit(Resource.Error(it.message.toString()))
             }
         }
-
     }
 }

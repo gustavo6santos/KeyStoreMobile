@@ -34,7 +34,7 @@
                 android:layout_marginStart="30dp"
                 android:fontFamily="@font/poppins_light"
                 android:text="All orders"
-                android:textColor="@color/black"
+                android:textColor="@color/white"
                 android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@id/imageCloseOrders"
