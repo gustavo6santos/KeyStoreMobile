@@ -101,11 +101,11 @@ class DetailsViewModel @Inject constructor(
                 val overallScore = (cpuScore + gpuScore + ramScore + osScore) / 4
 
                 val compatibilityMessage = when (overallScore) {
-                    5 -> "Highly Recommended"
-                    4 -> "Recommended"
-                    3 -> "Compatible"
-                    2 -> "Possibly Compatible"
-                    else -> "Not Recommended"
+                    5 -> "Score (1-5): 5 - Highly Compatibility"
+                    4 -> "Score (1-5): 4 - Good Compatibility"
+                    3 -> "Score (1-5): 3 - Compatible"
+                    2 -> "Score (1-5): 2 - Low Compatibility"
+                    else -> "Score (1-5): 1 - Not Recommended"
                 }
 
                 _checkCompatibility.value = Resource.Success(compatibilityMessage)

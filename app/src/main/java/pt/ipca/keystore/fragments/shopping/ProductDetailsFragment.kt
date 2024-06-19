@@ -111,7 +111,7 @@ class ProductDetailsFragment : Fragment() {
                 .load(product.images.firstOrNull())
                 .into(imageProductDetails)
             tvProductName.text = product.title
-            tvProductPrice.text = "$ ${product.price}"
+            tvProductPrice.text = "${product.price}€"
             tvProductDescription.text = product.genre
             tvCpuModel.text = product.cpuModel
             tvGpuModel.text = product.gpuModel
