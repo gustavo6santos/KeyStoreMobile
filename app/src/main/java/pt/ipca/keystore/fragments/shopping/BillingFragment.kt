@@ -21,6 +21,7 @@ import kotlinx.coroutines.flow.collectLatest
 import pt.ipca.keystore.R
 import pt.ipca.keystore.adapters.BillingProductsAdapter
 import pt.ipca.keystore.adapters.BillingCardAdapter
+import pt.ipca.keystore.adpters.CartProductAdapter
 import pt.ipca.keystore.data.Card
 import pt.ipca.keystore.data.CartProduct
 import pt.ipca.keystore.data.Order
@@ -33,7 +34,7 @@ import pt.ipca.keystore.viewmodel.OrderViewModel
 @AndroidEntryPoint
 class BillingFragment : Fragment() {
     private lateinit var binding: FragmentBillingBinding
-    private val billingProductsAdapter by lazy { BillingProductsAdapter() }
+    private val cartProductsAdapter by lazy { CartProductAdapter() }
     private val billingViewModel by viewModels<BillingViewModel>()
     private val args by navArgs<BillingFragmentArgs>()
     private var products = emptyList<CartProduct>()
@@ -68,7 +69,7 @@ class BillingFragment : Fragment() {
         }
 
         lifecycleScope.launchWhenStarted {
-            billingProductsAdapter.differ.submitList(products)
+            cartProductsAdapter.differ.submitList(products)
 
             binding.tvTotalPrice.text = "$totalPrice €"
 
@@ -101,7 +102,7 @@ class BillingFragment : Fragment() {
             }
         }
 
-        billingProductsAdapter.differ.submitList(products)
+        cartProductsAdapter.differ.submitList(products)
 
         // Fetch the payment options from the view model
         billingViewModel.getCards()
@@ -109,9 +110,9 @@ class BillingFragment : Fragment() {
     }
 
     private fun setupBillingProductsRv() {
-        binding.rvProducts.apply {
-            layoutManager = LinearLayoutManager(requireContext(), RecyclerView.HORIZONTAL, false)
-            adapter = billingProductsAdapter
+        binding.rvCart.apply {
+            layoutManager = LinearLayoutManager(requireContext(), RecyclerView.VERTICAL, false)
+            adapter = cartProductsAdapter
             addItemDecoration(HorizontalItemDecoration())
         }
     }

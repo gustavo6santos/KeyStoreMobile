@@ -12,9 +12,9 @@ data class Order (
     val products: List<CartProduct> = emptyList(),
     val date: String = SimpleDateFormat("yyyy-MM-dd", Locale.ENGLISH).format(Date()),
     val orderId: Long = nextLong(0, 100_000_000_000) + totalPrice.toLong(),
-    val gameKey: String = generateGameKey() // Add this line
+    //val gameKey: String = generateGameKey() // Add this line
 ) : Parcelable {
-    companion object {
+    /*companion object {
         fun generateGameKey(): String {
             val chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
             return (1..4).joinToString("-") {
@@ -22,4 +22,6 @@ data class Order (
             }
         }
     }
+
+     */
 }
