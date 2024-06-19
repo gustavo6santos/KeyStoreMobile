@@ -50,8 +50,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                 0 -> tab.text = "Main"
                 1 -> tab.text = "Pc"
                 2 -> tab.text = "Ps"
-                3 -> tab.text = "Xbox"
-                4 -> tab.text = "Nintendo"
+                3 -> tab.text = "Nintendo"
+                4 -> tab.text = "Xbox"
 
             }
         }.attach()

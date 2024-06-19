@@ -97,7 +97,7 @@ class MainCategoryViewModel @Inject constructor(
 }
 
 internal data class PagingInfo(
-    var bestProuctsPage: Long = 10,
+    var bestProuctsPage: Long = 30,
     var oldBestProducts: List<Product> = emptyList(),
     var isPaginEnd: Boolean = false
 )
